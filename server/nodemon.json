@@ -1,0 +1,9 @@
+{
+    "env": {
+        "ATLAS_USER": "lambdaUser",
+        "MONGODB_ATLAS_PW": "doEhIdwUv6cfen6X",
+        "MONGODB_ATLAS_DB": "tabless",
+        "JWT_SECRET": "tbd"
+    },
+    "verbose": true
+}
