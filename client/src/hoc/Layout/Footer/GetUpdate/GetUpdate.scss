@@ -1,0 +1,71 @@
+@import '../../../../styles/variables.scss';
+.GetUpdateContainer {
+     h2 {
+        font-size: 2.1rem;
+        color: white;
+        text-align: center;
+        margin-right: 1rem;
+        line-height: 1.6;
+        @media #{$tablet} {
+            font-size: calc(18px + (24 - 18) * (100vw - 600px)/(1200 - 600))
+        }
+    }
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    @media #{$mobile} {
+        flex-flow: column;
+        h2 {
+            margin-bottom: 2rem;
+        }
+    }
+    .GetUpdate__InputField {
+        display: flex;
+        @media #{$mobile} {
+            flex-flow: column;
+            width: 100%;
+        }
+        input {
+            height: 6rem;
+            width: 45rem;
+            margin-right: 2rem;
+            border-radius: 3rem;
+            border: 1px solid #ccc;
+            padding-left: 2rem;
+            font-size: 1.8rem;
+            @media #{$tablet} {
+                width: 25rem;
+                & ~ button {
+                    width: 13rem;
+                }
+            }
+            @media #{$mobile} {
+                width: 100%;
+                text-align: center;
+                & ~ button {
+                    width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+        button {
+            height: 6rem;
+            width: 22rem;
+            margin-left: 1rem;
+            border-radius: 3rem;
+            font-weight: 700;
+            background-color: #3E606F; 
+            background-image: linear-gradient(to top right, rgb(75, 115, 133), rgb(192, 201, 174));
+            border: none;
+            color: white;
+            @media #{$mobile} {
+                margin-top: 2rem;
+            }
+            cursor: pointer;
+            &:hover {
+                background: rgb(192, 201, 174);
+                transition-duration: .6s;
+            }
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import '../../../../styles/variables.scss';
+
+.PrimaryButton {
+    background: white;
+    border: 2px solid $primary-button;
+    color: $primary-button;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: white;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: inset 24rem 0 0 0 #{adjust-hue($primary-button, 45deg)};
+        border-color: #{adjust-hue($primary-button, 45deg)};
+        @media #{$mobile} {
+            box-shadow: none;
+            background-color: $primary-button;
+        }
+    }
+}
+
+.SecondaryButton {
+    background: white;
+    border: 2px solid $secondary-button;
+    color: $secondary-button;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: white;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: inset 24rem 0 0 0 #{adjust-hue($secondary-button, 15deg)};
+        border-color: #{adjust-hue($secondary-button, 15deg)};
+        @media #{$mobile} {
+            box-shadow: none;
+            background-color: $secondary-button;
+        }
+    }
+}
+
+.CancelButton {
+    background: white;
+    border: 2px solid $cancel-button;
+    color: $cancel-button;
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        color: white;
+        transition: .3s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: inset 24rem 0 0 0 #{adjust-hue($cancel-button, 15deg)};
+        border-color: #{adjust-hue($cancel-button, 15deg)};
+        @media #{$mobile} {
+            box-shadow: none;
+            background-color: $cancel-button;
+        }
+    }
+}

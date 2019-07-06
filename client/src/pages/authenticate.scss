@@ -1,0 +1,47 @@
+.AuthPageContainer {
+    padding: 25rem 0 10rem 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .BookmarkSVGContainer, .CheckingSVGContainer {
+        width: 200px;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .BookmarkSVGContainer {
+        position: absolute;
+        right: calc(50vw - 500px);
+        top: 15rem;
+        z-index: -1;
+    }
+    .CheckingSVGContainer {
+        position: absolute;
+        left: calc(50vw - 500px);
+        z-index: 3;
+        bottom: 5rem;
+    }
+    @media (max-width: 1020px) and (min-width: 601px) {
+        .BookmarkSVGContainer {
+            left: calc(20vw - 100px);
+        }
+        .CheckingSVGContainer {
+            left: calc(100vw - 250px);
+        }
+    }
+    @media (max-width: 600px) {
+        .BookmarkSVGContainer, .CheckingSVGContainer {
+            display: none;
+        }
+    }
+    .AuthError {
+        position: absolute;
+        bottom: 7rem;
+        left: 35%;
+        font-size: 1.4rem;
+        padding: 2px 5px;
+        border-radius: 5px;
+        background-color: #FFD0D0;
+    }
+}

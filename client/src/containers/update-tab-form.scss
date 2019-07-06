@@ -1,0 +1,32 @@
+@import '../styles/variables.scss';
+.UpdateForm {
+    padding: 4rem 8rem 8rem;
+    @media #{$mobile} {
+        padding: 4rem 2rem 8rem;
+    }
+    border-radius: 6px;
+    .UpdateForm__Header {
+        margin-bottom: 3rem;
+        h2 {
+            font-size: 1.8rem;
+            text-align: center;
+            @media #{$mobile} {
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .UpdateForm__SubmitButton {
+        width: 24rem;
+        height: 4rem;
+        margin: 0 1rem; 
+    }
+    .AddTab__urlInput:focus {
+        box-shadow: none !important;
+    }
+}
+
+.modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1.6rem;
+}

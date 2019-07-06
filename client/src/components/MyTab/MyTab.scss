@@ -1,0 +1,89 @@
+@import '../../styles/variables.scss';
+.MyTabContainer {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: .8rem 4.5rem .8rem 1.4rem;
+    height: 3rem;
+    width: 18%;
+    position: relative;
+    @media (max-width: 1015px) {
+        width: 17%;
+    }
+    @media (max-width: 800px) and (min-width: 601px) {
+        width: 40%;
+        flex-wrap: wrap
+    }
+    @media #{$mobile} {
+        width: 90%;
+    }
+    border-radius: 10px;
+    margin: 1rem 1rem; 
+    cursor: context-menu;
+    box-shadow: 0px 1px 10px -1px rgba(0,0,0,0.75);
+    overflow: hidden;
+    transition-duration: .4s;
+    background-color: white;
+    position: relative;
+    a.RealLink {
+        display: none;
+    }
+    a.FakeLink {
+        display: inline-block;
+        overflow:hidden; 
+        white-space:nowrap; 
+        text-overflow: ellipsis;
+        width: 150px;
+    }
+    &:hover {
+        transition-duration: .2s;
+        box-shadow: 0px 6px 21px -1px rgba(0,0,0,0.75);
+    }
+    &.Expanded {
+        height: unset;
+        transition-duration: height 1s;
+        z-index: 10;
+        padding: .8rem 1.5rem .8rem 1.4rem;
+        a.RealLink {
+            display: inline-block;
+            overflow: hidden; 
+            white-space: nowrap; 
+            text-overflow: ellipsis;
+            width: 150px;
+        }
+        a.FakeLink {
+            display: none;
+        }
+    .MyTabContainer-Delete__button {
+        width: 14px;
+        transform: rotate(0deg);
+        top: 8px;
+        right: 4px;
+        background-color: rgb(185, 47, 47);
+        box-shadow: 3px 3px 23px -1px rgba(0,0,0,0.75);
+        z-index: 40;
+        position: absolute;
+        height: 14px;
+        cursor: pointer;
+        border-radius: 50%;
+        &:after, &:before {
+            position: absolute;
+            height: 2px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+        }
+        &:after, &:before {
+            content: '';
+            width: 10px; 
+            left: 2px; 
+            transition: .5s;
+            top: 6px;
+        }
+        &:after {
+            transform: rotate(-315deg);
+        }
+        &:before {
+            transform: rotate(-45deg);
+        }
+    }
+}
+}

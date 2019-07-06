@@ -1,0 +1,75 @@
+@import '../../../../styles/variables.scss';
+.NavigationItems {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    .NavigationItem {
+        height: inherit;
+        width: auto;
+        position: relative;
+        a {
+            color: white;
+            display: inline-block;
+            height: inherit;
+            padding: 20px 10px 5px 10px;
+            border-bottom: 4px solid transparent;
+            text-decoration: none;
+            font-size: 1.6rem;
+            &:hover, &:active, &.active {
+                @media #{$desktop} {
+                    transition-duration: .25s;
+                    background-color: #234758;
+                    border-bottom: 4px solid #FCFFF5;
+                    color: white;
+                }
+            }
+        }
+        @media #{$mobile}, #{$tablet} {
+            padding: 10px 0;
+            width: 100%;
+            a {
+                color: $font-color;
+                width: 100%;
+            }
+        }
+    }
+    @media #{$mobile}, #{$tablet} {
+        flex-flow: column;
+        align-items: center;
+    }
+}
+// BORDER EFFECT
+.NavigationItems {
+    @media #{$mobile}, #{$tablet} {
+        .NavigationItem {
+            &:after {
+                content:"";
+                width: 0;
+                height: 2px;
+                position: absolute;
+                transition: all 0.2s linear;
+                background: #91AA9D;
+                transition-delay: 0.2s;
+            }
+            &:hover::after {
+                width: 100%;
+                transition-delay: 0s;
+                left: 0;
+            }
+            &::after {
+                left: 50%;
+                bottom: 0;
+            }
+            a:active::after,
+            a.active::after {
+                content:"";
+                height: 2px;
+                position: absolute;
+                background: #91AA9D;
+                width: 100%;
+                left: 0;
+                bottom: 0;
+            }
+        }
+    }
+}

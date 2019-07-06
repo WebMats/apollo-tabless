@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+.Backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	z-index: $backdropZ;
+	left: 0; 
+	top: 0;
+	background-color: rgba(0,0,0,.5);
+	transition: background-color .4s;
+	&:hover {
+		background-color: transparent;
+		transition: background-color .7s;
+		& ~ .SideDrawer.Open {
+			background-color: rgb(154, 156, 148);
+			transition: background-color .7s;
+			& li * {
+				opacity: 0;
+				transition: opacity 1s;
+			}
+		}
+	}
+}

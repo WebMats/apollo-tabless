@@ -1,0 +1,74 @@
+@import '../../../../styles/variables.scss';
+.InputHolder {
+    position: relative;
+    margin-bottom: 1.9rem;
+    width: 30rem;
+    @media #{$mobile} {
+        width: 100%;
+    }
+}
+.Label, 
+.Input {
+    height: 4.2rem;
+    padding: 1.1rem;
+    color: $font-color;
+    line-height: 1.5;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    @media #{$mobile} {
+        width: 100%;
+    }
+}
+.Label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    cursor: text; /* Match the input under the label */
+    border: 1px solid transparent;
+    pointer-events: none; //makes it so that upon a click we will click the input and not the label that sits over it
+    transition: all .1s ease-in-out;
+}
+.Input {
+    width: 30rem;
+    @media #{$mobile} {
+        width: 100%;
+    }
+    border: 1px solid #ced4da;
+    height: calc(4.2rem + 2px);
+    font-weight: 400;
+    background-color: white;
+    background-clip: padding-box;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    &::placeholder {
+            color: transparent;
+    }
+    &:not(:placeholder-shown) {
+        padding-top: 1.8rem;
+        padding-bottom: .2rem;
+        & ~ label {
+            padding-top: .2rem;
+            padding-bottom: .25rem;
+            font-size: 12px;
+            color: #777;
+        }
+    }
+    &.Invalid {
+        border: 1px solid red;
+        background-color: #FFD0D0;
+    }
+}
+.InputHolder > span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    text-align: center;
+    width: 4rem;
+    cursor: pointer;
+    line-height: 4.6;
+    border-top-right-radius: 5px;
+    background-color: #777;
+    color:white;
+    border-bottom-right-radius: 5px; 
+}

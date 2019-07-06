@@ -1,0 +1,15 @@
+@import '../styles/variables.scss';
+.AddTabContainer {
+    padding-top: 20rem;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    h1 {
+        font-size: 3.4rem;
+        @media #{$mobile} {
+            font-size: calc(28px + (34 - 28) * (100vw - 400px)/(600 - 300));
+        }
+        margin-bottom: 1rem;
+        letter-spacing: 1.2px;
+    }
+}

@@ -1,0 +1,56 @@
+@import '../../../../styles/variables.scss';
+.TogglerDiamond {
+    border: 2px solid white;
+    width: 40px;
+    height: 40px;
+    transition: .5s;
+    transform: rotate(45deg);
+    z-index: $togglerZ;
+    display: none;
+    @media #{$tablet}, #{$mobile} {
+        display: block;
+    }
+    &.Active {
+        transform: rotate(225deg);
+        transition: .5s;
+        border-color: white;
+    }
+}
+.Toggler {
+    width: 20px;
+	transform: rotate(-45deg);
+	top: 48%;
+	left: 23%;
+    &, &:after, &:before {
+        position: absolute;
+        height: 2px;
+        background-color: white;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    }
+    &:after, &:before {
+        content: '';
+        width: 25px; 
+        left: -10%; 
+        transition: .5s;
+    }
+}
+.Toggler:after {
+    top: 9px;
+}
+.Toggler:before {
+    top: -9px;
+}
+.TogglerDiamond.Active .Toggler {
+	background: rgba(0,0,0,0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+    &:before, &:after {
+        top: 0;
+        background-color: white;
+    }
+    &:after {
+        transform: rotate(-315deg);
+    }
+    &:before {
+        transform: rotate(-45deg);
+    }
+}

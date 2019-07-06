@@ -1,0 +1,29 @@
+@import '../styles/variables.scss';
+.MyTabsContainer {
+    padding: 16rem 5rem;
+    @media #{$tablet} {
+        padding: 16rem 0;
+    }
+    margin-bottom: 50rem;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    .TabsColumn {
+        @media #{$mobile} {
+            flex-flow: column;
+            height: unset;
+        }
+        @media (max-width: 800px) and (min-width: 601px) {
+            height: 16.4rem;
+        }
+        padding-bottom: 1rem;
+        height: 8rem;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+        align-items: center;
+    }
+}

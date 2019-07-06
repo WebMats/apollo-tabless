@@ -1,0 +1,22 @@
+// COLORS
+$background: #FCFFF5;
+$color2: #D1DBBD;
+    // BUTTONS
+    $primary-button:#D1DBBD;
+    $cancel-button: rgb(177, 58, 54);
+    $secondary-button: #3E606F;
+$spinner-color: #91AA9D;
+$font-color: #193441;
+$navbar-color: #193441;
+$footer-color: #193441;
+$modal-header-color: #3E606F;
+// z-indexes
+$navbarZ: 200;
+$backdropZ: 100;
+$drawerZ: 150;
+$togglerZ: 200;
+// MEDIA DEVICES
+$tablet: "(max-width: 1200px) and (min-width: 601px)";
+$mobile: "(max-width: 600px)";
+$desktop: "(min-width: 1200px)";
+

@@ -1,0 +1,56 @@
+@import '../../../../styles/variables.scss';
+.FooterLinkContainer {
+    margin-top: 4rem;
+    display: flex;
+    @media #{$mobile} {
+        flex-flow: column;
+    }
+    justify-content: space-around;
+    .FooterLink__Spacer {
+        width: 30rem;
+        @media #{$tablet} {
+            display: none;
+        }
+    }
+    h3 {
+        color: white;
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+        letter-spacing: 1.6px;;
+    }
+    address p {
+        margin: 1rem 0;
+        font-size: 1.6rem;
+        color: rgb(129, 129, 129);
+    }
+    .Company {
+       > p {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+            color: rgb(129, 129, 129);
+        }
+        @media #{$mobile} {
+            margin: 5rem 0;
+        }
+    }
+    .Contact {
+        > p, span {
+            margin: 1rem 0;
+            font-size: 1.6rem;
+            color: rgb(129, 129, 129);
+        }
+    }
+    .Footer__IconsHolder {
+        span {
+            margin: 0 1rem; 
+            > i {
+                font-size: 2.6rem;
+                cursor: pointer;
+                &:hover {
+                    color: white;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.AddTabForm .InputsHolder {
+    .AddTab__urlInput.Invalid, .AddTab__categoryInput.Invalid {
+        border: 1px solid red;
+            background-color: #FFD0D0;
+    }
+}
+.AddTab__categoryInput {
+    margin: .5rem 0 2rem;
+    border: 1px solid #ccc;
+    padding-bottom: 2px;
+    height: 2.6rem;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    padding: 1.8rem 0;
+    padding-left: 1rem;
+    &:focus {
+        box-shadow: 0px 4px 18px -4px rgba(0,0,0,0.75);
+        transform: translateY(-1px);
+        transition-duration: .2s;
+    }
+}
+.URLInputHolder {
+    margin: 3rem 0;
+    position: relative;
+    span {
+        position: absolute;
+        top: 1px;
+        left: 1px;
+    }
+    align-self: center;
+    span {
+        background-color: #ccc;
+        height: 94%;
+        width: 2.4rem;
+        padding: 7px 0 0;
+        text-align: center;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        z-index: 2;
+    }
+    .AddTab__urlInput {
+        margin: 0;
+        border:1px solid #ccc;
+        padding-bottom: 2px;
+        height: 2.6rem;
+        width: 100%;
+        border-radius: 4px;
+        padding-left: 3rem;
+        &:focus {
+            box-shadow: 0px 4px 18px -4px rgba(0,0,0,0.75);
+        }
+    }
+}

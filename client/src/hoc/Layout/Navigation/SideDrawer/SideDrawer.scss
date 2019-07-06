@@ -1,0 +1,27 @@
+@import '../../../../styles/variables.scss';
+.SideDrawer {
+    position: fixed;
+    width: 300px;
+    max-width: 70%;
+    height: calc(100% - 56px);
+    right: 0;
+    bottom: 0;
+    z-index: $drawerZ;
+    background-color: $background;
+    border: solid rgb(208, 211, 202);
+    border-right: none;
+    padding: 32px 16px;
+    transition: transform 0.3s ease-out;
+    display: none;
+    @media #{$mobile}, #{$tablet} {
+        display: block;
+    }
+    &.Open {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    &.Close {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

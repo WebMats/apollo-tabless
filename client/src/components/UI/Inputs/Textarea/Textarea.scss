@@ -1,0 +1,33 @@
+
+.TextareaWrapper {
+    margin: 1rem 0;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    .Textarea {
+        border-radius: 4px;
+        resize: none;
+        font-size: 1.6rem;
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        &:focus {
+            box-shadow: 0px 4px 18px -4px rgba(0,0,0,0.75);
+            transform: translateY(-1px);
+            transition-duration: .2s;
+        }
+        outline-width: 3px;
+    }
+    .Limit {
+        align-self: flex-end;
+        color: rgb(138, 138, 138);
+        margin-top: 3px;
+        &.True {
+            color: red;
+            z-index: 20;
+            font-size: 1.3rem;
+            transform: translate(-10px, -25px);
+            transition-duration: .2s;
+        }
+    }
+}
